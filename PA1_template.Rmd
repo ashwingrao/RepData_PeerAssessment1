@@ -3,10 +3,12 @@ title: 'Reproducible Research: Peer Assessment 1'
 author: "Ashwin Rao"
 date: "April 15, 2015"
 output: 
-  html_document:
-  keep_md: true
+  html_document
 ---
-
+```{r setchunk, cache=FALSE, include=TRUE}
+library(knitr)
+opts_chunk$set(fig.path = "./figures/")
+```
 ## Assumptions
 It is assumed that we are currently in the folder where the data is. If this is not the case, please use setwd() to change the working directory like the following statement
 
@@ -107,7 +109,7 @@ head(newDt)
 ```
 
 ### Make a histogram of the total number of steps taken each day 
-```{r}
+```{r histNoNull}
 steps_aggregate <- aggregate(steps ~ date, data = newDt, FUN=sum, na.exclude=TRUE)
 hist(x= steps_aggregate$steps, xlab = "Number of Steps", ylab = "Frequency", main = "Histogram of total steps taken each day", col = "blue")
 ```
@@ -146,7 +148,7 @@ newDt$dayType <- factor(sapply(X = newDt$day, FUN = typeOfWeek))
 ```
 
 ### Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
-```{r}
+```{r timeseriesPanel}
 
 stepsByDay <- aggregate(steps ~ interval + dayType, data = newDt, mean)
 names(stepsByDay) <- c("interval", "daylevel", "steps")
