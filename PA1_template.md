@@ -5,7 +5,6 @@ April 15, 2015
 ```r
 library(knitr)
 opts_chunk$set(fig.path = "./figures/")
-### opts_chunk$set(include = FALSE)
 ```
 ## Assumptions
 It is assumed that we are currently in the folder where the data is. If this is not the case, please use setwd() to change the working directory like the following statement
