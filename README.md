@@ -1,3 +1,12 @@
+
+-------------
+
+[If you are looking for the final result, please go here!](https://github.com/ashwingrao/RepData_PeerAssessment1/blob/master/PA1_template.md "Click Here")
+
+-------------
+
+
+
 ## Introduction
 
 It is now possible to collect a large amount of data about personal

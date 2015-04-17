@@ -6,6 +6,14 @@ April 15, 2015
 library(knitr)
 opts_chunk$set(fig.path = "./figures/")
 ```
+
+
+-------------
+
+[If you are looking for the final result, please go here!](https://github.com/ashwingrao/RepData_PeerAssessment1/blob/master/PA1_template.md "Click Here")
+
+-------------
+
 ## Assumptions
 It is assumed that we are currently in the folder where the data is. If this is not the case, please use setwd() to change the working directory like the following statement
 
